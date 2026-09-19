@@ -28,15 +28,17 @@ export default function Story() {
               ))}
             </div>
             <div>
-              <Link href="/ons-verhaal" className="btn btn--outline">LEES ONS VERHAAL</Link>
+              <Link href="/ons-verhaal" className="btn btn--outline">
+                LEES ONS VERHAAL
+              </Link>
             </div>
           </div>
 
           <div className="story__images">
             <div className="story__tall">
               <Image
-                src="/images/peanuts-texture.avif"
-                alt="Pindavelden in Gambia"
+                src="/images/bionutz-peanut-kernels.avif"
+                alt="Gepelde pinda's"
                 fill
                 sizes="(max-width: 700px) 100vw, 25vw"
                 style={{ objectFit: 'cover' }}
@@ -44,10 +46,22 @@ export default function Story() {
             </div>
             <div className="story__stack">
               <div>
-                <Image src="/images/peanuts-wood.avif" alt="Pinda's op hout" width={600} height={400} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <Image
+                  src="/images/bionutz-peanuts-harvest.avif"
+                  alt="Pinda-oogst"
+                  width={600}
+                  height={400}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
               <div>
-                <Image src="/images/peanuts-texture.avif" alt="Pindaschillen" width={600} height={400} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <Image
+                  src="/images/peanuts-wood.avif"
+                  alt="Pinda's op hout"
+                  width={600}
+                  height={400}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
             </div>
           </div>

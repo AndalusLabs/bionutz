@@ -1,4 +1,4 @@
-const WORDS = ['PURE PINDA', 'PURE SMAAK', "PINDA'S UIT GAMBIA", 'VAN PINDA TOT PRODUCT'];
+const WORDS = ['DE EERSTE BIONUTZ KOMT ERAAN', 'VANAF 1 DECEMBER', 'SCHRIJF JE IN EN PROEF ALS EERSTE'];
 
 export default function Marquee() {
   const loop = [...WORDS, ...WORDS];

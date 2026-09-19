@@ -2,27 +2,35 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Logo from './Logo';
+import Image from 'next/image';
 import CartIcon from './CartIcon';
+import { useCart } from '@/lib/cart';
 
 const NAV = [
-  { label: 'HOME', href: '#top' },
-  { label: 'SHOP', href: '#shop' },
-  { label: 'ONS VERHAAL', href: '#verhaal' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'HOME', href: '/' },
+  { label: 'SHOP', href: '/#shop' },
+  { label: 'ONS VERHAAL', href: '/ons-verhaal' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'CONTACT', href: '/#contact' },
 ];
 
-export default function Header({ cartCount = 0 }: { cartCount?: number }) {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { totalQuantity, openCart } = useCart();
   const close = () => setMenuOpen(false);
 
   return (
     <header className="header">
       <div className="header__bar">
-        <Link href="#top" className="header__logo">
-          <Logo size={42} />
-          <span className="header__wordmark">BIONUTZ</span>
+        <Link href="/" className="header__logo" aria-label="BIONUTZ Home" onClick={close}>
+          <Image
+            src="/brand/logo_bionutz_new.png"
+            alt="BIONUTZ"
+            width={200}
+            height={112}
+            className="header__logo-img"
+            priority
+          />
         </Link>
 
         <nav className="header__nav">
@@ -33,15 +41,16 @@ export default function Header({ cartCount = 0 }: { cartCount?: number }) {
           ))}
         </nav>
 
-        <Link href="#shop" className="header__cart">
+        <button type="button" className="header__cart" onClick={openCart} aria-label="Winkelwagen openen">
           <CartIcon />
-          <span>CART ({cartCount})</span>
-        </Link>
+          <span>WINKELWAGEN ({totalQuantity})</span>
+        </button>
 
         <div className="header__mobile">
-          <Link href="#shop" aria-label="Cart" className="header__icon-btn">
+          <button type="button" aria-label="Winkelwagen" className="header__icon-btn" onClick={openCart}>
             <CartIcon size={17} />
-          </Link>
+            {totalQuantity > 0 && <span className="header__badge">{totalQuantity}</span>}
+          </button>
           <button
             type="button"
             aria-label="Menu"
@@ -63,9 +72,9 @@ export default function Header({ cartCount = 0 }: { cartCount?: number }) {
               {item.label}
             </Link>
           ))}
-          <Link href="#shop" onClick={close} className="btn btn--dark">
-            SHOP BIONUTZ
-          </Link>
+          <button type="button" className="btn btn--dark" onClick={() => { close(); openCart(); }}>
+            WINKELWAGEN ({totalQuantity})
+          </button>
         </nav>
       )}
     </header>

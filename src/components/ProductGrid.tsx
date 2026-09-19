@@ -18,26 +18,30 @@ export default function ProductGrid() {
           </p>
         </div>
 
-        <div className="shop__grid">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <div className="shop__showcase">
+          <div className="shop__grid shop__grid--2x2">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
 
-          <article className="card--teaser">
-            <p className="lede">
-              MEER
+          <aside className="shop__promo">
+            <span className="shop__promo-label">DIT IS PAS HET BEGIN</span>
+            <h3 className="shop__promo-title">
+              ER KOMT
               <br />
-              PINDA.
-              <br />
-              MEER
-              <br />
-              VOLGT.
+              MEER AAN.
+            </h3>
+            <p className="shop__promo-copy">
+              Ons assortiment groeit. Nieuwe BIONUTZ-producten zijn onderweg.
             </p>
-            <div className="stack">
-              <p>Het assortiment groeit met de pinda mee. Nieuwe BIONUTZ-producten volgen.</p>
-              <Link href="#shop" className="btn btn--tan">SHOP NU</Link>
-            </div>
-          </article>
+            <Link href="#contact" className="btn btn--tan btn--sm">
+              BLIJF OP DE HOOGTE
+            </Link>
+            <span className="shop__promo-mark" aria-hidden="true">
+              BIONUTZ
+            </span>
+          </aside>
         </div>
       </div>
     </section>

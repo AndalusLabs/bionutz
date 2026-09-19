@@ -9,7 +9,7 @@ export default function CtaBand() {
           <br />
           <span className="serif">Wij ook.</span>
         </h2>
-        <Link href="#shop" className="btn btn--dark btn--lg">SHOP BIONUTZ</Link>
+        <Link href="/#shop" className="btn btn--dark btn--lg">SHOP BIONUTZ</Link>
       </div>
     </section>
   );

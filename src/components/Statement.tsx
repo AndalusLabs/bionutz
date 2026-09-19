@@ -3,7 +3,13 @@ import Image from 'next/image';
 export default function Statement() {
   return (
     <section className="statement">
-      <Image src="/images/peanuts-texture.avif" alt="" fill sizes="100vw" style={{ objectFit: 'cover' }} />
+      <Image
+        src="/images/bionutz-peanut-kernels.avif"
+        alt=""
+        fill
+        sizes="100vw"
+        style={{ objectFit: 'cover' }}
+      />
       <div className="statement__veil" />
       <div className="shell statement__inner">
         <p className="display statement__line">PINDA&rsquo;S.</p>
