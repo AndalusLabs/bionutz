@@ -6,7 +6,7 @@ import CartDrawer from '@/components/CartDrawer';
 
 export const metadata = {
   title: 'Ons verhaal — BIONUTZ',
-  description: 'Van pinda tot product. Het verhaal van BIONUTZ tussen Gambia en Nederland.',
+  description: 'Van Bakau naar Nederland. Het familieambacht achter BIONUTZ.',
 };
 
 export default function OnsVerhaalPage() {
@@ -16,23 +16,24 @@ export default function OnsVerhaalPage() {
       <main>
         <section className="story-page">
           <div className="shell story-page__hero">
-            <span className="eyebrow">ONS VERHAAL</span>
-            <h1 className="display">
-              Ons verhaal begint
-              <br />
-              met een <span className="serif" style={{ color: 'var(--rust)' }}>pinda</span>.
-            </h1>
-            <p>
-              BIONUTZ verbindt Gambia en Nederland via één ingrediënt dat alle aandacht verdient.
-              Geen lange claims — wel een heldere missie: pinda&rsquo;s, puur en met smaak.
+            <div className="story-page__hero-copy">
+              <span className="eyebrow">ONS VERHAAL</span>
+              <h1 className="display">
+                Van Bakau
+                <br />
+                naar <span className="serif" style={{ color: 'var(--rust)' }}>Nederland</span>.
+              </h1>
+            </div>
+            <p className="story-page__hero-lede">
+              Pindakaas met aandacht voor de pinda, de herkomst en het vakmanschap erachter.
             </p>
           </div>
 
           <div className="story-page__band">
             <div className="story-page__band-media">
               <Image
-                src="/images/bionutz-peanuts-harvest.avif"
-                alt="Pinda-oogst"
+                src="/images/peanut-white.avif"
+                alt="Pinda's op wit"
                 fill
                 sizes="100vw"
                 style={{ objectFit: 'cover' }}
@@ -42,56 +43,77 @@ export default function OnsVerhaalPage() {
           </div>
 
           <div className="shell story-page__body">
-            <article>
-              <h2 className="display">Waarom BIONUTZ?</h2>
-              <p>
-                We geloven dat een goed product geen eindeloze lijst toevoegingen nodig heeft.
-                BIONUTZ draait om de pinda zelf — in de schil, als pasta, of in een bar.
-              </p>
-            </article>
-
-            <article className="story-page__split">
-              <div>
-                <h2 className="display">Gambia → Nederland</h2>
+            <div className="story-page__row">
+              <article className="story-page__prose">
                 <p>
-                  Onze pinda&rsquo;s komen uit Gambia. Het assortiment ontwikkelen en afronden we
-                  in Nederland. Twee plekken, één rode draad: respect voor het product.
+                  Mijn naam is Ibrahim en ik ben geboren en opgegroeid in{' '}
+                  <strong>Bakau, Gambia</strong>. Al van jongs af aan kwam ik via mijn ouders in
+                  aanraking met de pindateelt. Binnen onze familie is het verbouwen, roosteren en
+                  verwerken van pinda&rsquo;s een echt ambacht dat al generaties lang wordt
+                  doorgegeven.
                 </p>
-              </div>
-              <div className="story-page__split-media">
+                <p>
+                  Vooral van mijn moeder leerde ik hoe je met goede pinda&rsquo;s, geduld en een
+                  eenvoudig recept iets bijzonders kunt maken.
+                </p>
+                <p>
+                  Toen ik op 23-jarige leeftijd naar Nederland kwam, merkte ik al snel dat pindakaas
+                  hier heel anders smaakte dan wat ik uit Gambia gewend was. Ik miste die pure, volle
+                  pindasmaak van thuis.
+                </p>
+                <p>
+                  Zo ontstond het idee voor <strong>Bionutz</strong>: het familieambacht waarmee ik
+                  ben opgegroeid naar Nederland brengen. Pindakaas met aandacht voor de pinda, de
+                  herkomst en het vakmanschap erachter.
+                </p>
+              </article>
+              <div className="story-page__side-media story-page__side-media--arch">
                 <Image
-                  src="/images/bionutz-peanut-kernels.avif"
-                  alt="Gepelde pinda's"
+                  src="/images/peanut-crops-field.avif"
+                  alt="Pindavelden"
                   fill
-                  sizes="(max-width: 800px) 100vw, 40vw"
+                  sizes="(max-width: 900px) 100vw, 42vw"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-            </article>
+            </div>
 
-            <article>
-              <h2 className="display">De pinda centraal</h2>
-              <p>
-                Of je nu kiest voor hele pinda&rsquo;s, creamy of crunchy pindakaas, of peanut bars —
-                elk product begint bij dezelfde basis. Smaak eerst. Verhaal daarna.
-              </p>
-            </article>
-
-            <article>
-              <h2 className="display">Waar we naartoe willen</h2>
-              <p>
-                Vanaf 1 december lanceren we de eerste BIONUTZ. Daarna groeit het assortiment mee
-                met de pinda. Wil je als eerste proeven? Schrijf je in of shop straks via onze webshop.
-              </p>
-              <div className="story-page__actions">
-                <Link href="/#shop" className="btn btn--dark">
-                  BEKIJK DE SHOP
-                </Link>
-                <Link href="/#contact" className="btn btn--outline">
-                  NEEM CONTACT OP
-                </Link>
-              </div>
-            </article>
+            <div className="story-page__row">
+              <article>
+                <h2 className="display">
+                  Goed voor jou,
+                  <br />
+                  goed voor <span className="serif" style={{ color: 'var(--rust)' }}>Gambia</span>.
+                </h2>
+                <div className="story-page__prose">
+                  <p>
+                    Voor mij draait Bionutz om meer dan alleen goede pindakaas. Achter iedere pinda
+                    staan boeren en families die al generaties lang leven van de pindateelt.
+                  </p>
+                  <p>
+                    Onze pinda&rsquo;s komen zo direct mogelijk uit Gambia. Zo blijft de lijn tussen
+                    boer en consument kort, en komt er meer waarde terecht bij de mensen aan de bron.
+                  </p>
+                  <p>
+                    Met iedere pot Bionutz proef je daarom niet alleen pindakaas, maar ook een stukje
+                    Gambia, familie en traditie.
+                  </p>
+                </div>
+              </article>
+              <aside className="story-page__aside">
+                <p className="serif story-page__pull">
+                  &ldquo;Een stukje Gambia, familie en traditie — in iedere pot.&rdquo;
+                </p>
+                <div className="story-page__actions">
+                  <Link href="/#shop" className="btn btn--dark">
+                    BEKIJK DE SHOP
+                  </Link>
+                  <Link href="/#contact" className="btn btn--outline">
+                    NEEM CONTACT OP
+                  </Link>
+                </div>
+              </aside>
+            </div>
           </div>
         </section>
       </main>

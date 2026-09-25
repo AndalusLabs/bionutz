@@ -13,6 +13,7 @@ export type Product = {
   alt: string;
   href: string;
   badgeTone?: 'dark' | 'tan';
+  available: boolean;
   ingredients: string;
   allergens: string;
   storage: string;
@@ -20,26 +21,9 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    id: 'hele-pindas',
-    handle: 'hele-pindas',
-    number: '01',
-    title: "HELE PINDA'S",
-    description: "Pure pinda's, vol van smaak. De basis van BIONUTZ.",
-    longDescription:
-      "Onze hele pinda's zijn de basis van alles wat BIONUTZ maakt. Geselecteerd in Gambia, met een volle, nootachtige smaak. Perfect om zo te snacken, te roosteren of te verwerken in je eigen keuken.",
-    price: 5.95,
-    size: '200 g',
-    image: '/images/BIONUTZ Whole Peanuts.png',
-    alt: "Hele pinda's",
-    href: '/producten/hele-pindas',
-    ingredients: "100% pinda's.",
-    allergens: "Bevat pinda's. Kan sporen van andere noten bevatten.",
-    storage: 'Koel, droog en donker bewaren.',
-  },
-  {
     id: 'creamy-pindakaas',
     handle: 'creamy-pindakaas',
-    number: '02',
+    number: '01',
     title: 'CREAMY PINDAKAAS',
     description: 'Zacht, romig en gemaakt met de pinda in de hoofdrol.',
     longDescription:
@@ -49,6 +33,7 @@ export const products: Product[] = [
     image: '/images/BIONUTZ Creamy Peanut Butter.png',
     alt: 'Creamy pindakaas',
     href: '/producten/creamy-pindakaas',
+    available: true,
     ingredients: "100% geroosterde pinda's.",
     allergens: "Bevat pinda's.",
     storage: 'Koel en droog bewaren. Na openen omdraaien of roeren indien nodig.',
@@ -56,7 +41,7 @@ export const products: Product[] = [
   {
     id: 'crunchy-pindakaas',
     handle: 'crunchy-pindakaas',
-    number: '03',
+    number: '02',
     title: 'CRUNCHY PINDAKAAS',
     description: 'Vol en romig, met stukjes pinda voor extra bite.',
     longDescription:
@@ -66,9 +51,28 @@ export const products: Product[] = [
     image: '/images/BIONUTZ Crunchy Peanut Butter.png',
     alt: 'Crunchy pindakaas',
     href: '/producten/crunchy-pindakaas',
+    available: false,
     ingredients: "100% geroosterde pinda's.",
     allergens: "Bevat pinda's.",
     storage: 'Koel en droog bewaren. Na openen omdraaien of roeren indien nodig.',
+  },
+  {
+    id: 'hele-pindas',
+    handle: 'hele-pindas',
+    number: '03',
+    title: "HELE PINDA'S",
+    description: "Pure pinda's, vol van smaak. De basis van BIONUTZ.",
+    longDescription:
+      "Onze hele pinda's zijn de basis van alles wat BIONUTZ maakt. Geselecteerd in Gambia, met een volle, nootachtige smaak. Perfect om zo te snacken, te roosteren of te verwerken in je eigen keuken.",
+    price: 5.95,
+    size: '200 g',
+    image: '/images/BIONUTZ Whole Peanuts.png',
+    alt: "Hele pinda's",
+    href: '/producten/hele-pindas',
+    available: false,
+    ingredients: "100% pinda's.",
+    allergens: "Bevat pinda's. Kan sporen van andere noten bevatten.",
+    storage: 'Koel, droog en donker bewaren.',
   },
   {
     id: 'peanut-bars',
@@ -84,6 +88,7 @@ export const products: Product[] = [
     alt: 'Peanut bars',
     href: '/producten/peanut-bars',
     badgeTone: 'tan',
+    available: false,
     ingredients: "Pinda's, rijststroop. (Definitieve samenstelling volgt.)",
     allergens: "Bevat pinda's.",
     storage: 'Koel en droog bewaren.',

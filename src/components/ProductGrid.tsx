@@ -6,16 +6,12 @@ export default function ProductGrid() {
   return (
     <section id="shop" className="shop">
       <div className="shell shop__inner">
-        <div className="shop__head">
+        <div className="shop__head shop__head--solo">
           <h2 className="display">
             &Eacute;&Eacute;N PINDA.
             <br />
             VEEL <span className="serif" style={{ color: 'var(--rust)' }}>mogelijkheden</span>.
           </h2>
-          <p>
-            Het BIONUTZ-assortiment vertrekt altijd vanaf dezelfde pinda. In de schil, gepeld,
-            geroosterd, gemalen of gebundeld in een bar.
-          </p>
         </div>
 
         <div className="shop__showcase">
@@ -33,9 +29,10 @@ export default function ProductGrid() {
               MEER AAN.
             </h3>
             <p className="shop__promo-copy">
-              Ons assortiment groeit. Nieuwe BIONUTZ-producten zijn onderweg.
+              Het BIONUTZ-assortiment vertrekt altijd vanaf dezelfde pinda. In de schil, gepeld,
+              geroosterd, gemalen of gebundeld in een bar. Nieuwe producten zijn onderweg.
             </p>
-            <Link href="#contact" className="btn btn--tan btn--sm">
+            <Link href="/#contact" className="btn btn--tan btn--sm">
               BLIJF OP DE HOOGTE
             </Link>
             <span className="shop__promo-mark" aria-hidden="true">
