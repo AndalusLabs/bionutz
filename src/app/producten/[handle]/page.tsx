@@ -16,9 +16,9 @@ export async function generateMetadata({
 }) {
   const { handle } = await params;
   const product = getProductByHandle(handle);
-  if (!product) return { title: 'Product niet gevonden — BIONUTZ' };
+  if (!product) return { title: 'Product niet gevonden' };
   return {
-    title: `${product.title} — BIONUTZ`,
+    title: product.title,
     description: product.description,
   };
 }

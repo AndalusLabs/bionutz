@@ -2,34 +2,31 @@
 
 Homepage-ontwerp omgezet naar Next.js (App Router, React 19, TypeScript).
 
-## Starten
+**Productie:** https://www.bionutz.com
+
+## Starten (lokaal)
 
     npm install
+    cp .env.example .env.local   # vul Shopify + site URL in
     npm run dev
 
 Open http://localhost:3000
 
 ## Structuur
 
-    src/app/layout.tsx      fonts, metadata, globale CSS
-    src/app/page.tsx        homepage, zet de secties samen
-    src/app/globals.css     design tokens + alle component-stijlen
-    src/components/         Header, Hero, Marquee, ProductGrid, ...
-    src/lib/products.ts     productdata (nu lokaal, later Shopify)
-    src/lib/shopify.ts      Storefront API client (stub, klaar om te vullen)
-    public/images/          foto's
-    public/brand/           logo's
+    src/app/                routes, layout, sitemap, robots, API
+    src/components/         UI-secties (Header, Hero, Shop, …)
+    src/lib/                products, cart, Shopify helpers, site URL
+    public/images/          foto's & logo's
 
-## Shopify koppelen
+## Omgeving
 
-1. Kopieer `.env.example` naar `.env.local` en vul store domain + Storefront access token in.
-2. `src/lib/shopify.ts` bevat de fetch-helper met `storefront()`.
-3. Vervang de statische array in `src/lib/products.ts` door een Storefront-query
-   (`products(first: 8)`) en map het resultaat naar hetzelfde `Product` type —
-   de componenten hoeven dan niet te veranderen.
-4. Cart: maak `cartCreate` / `cartLinesAdd` mutations aan en vervang de
-   cart-teller in `Header.tsx`.
+- Lokaal: `NEXT_PUBLIC_SITE_URL=http://localhost:3000`
+- Productie (Vercel): `NEXT_PUBLIC_SITE_URL=https://www.bionutz.com`
+- Shopify Admin (waitlist): `SHOPIFY_SHOP_DOMAIN`, `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET` — **nooit** `NEXT_PUBLIC_*`
 
-## Design tokens
+## Shopify
 
-Alle kleuren staan als CSS-variabelen in `globals.css` onder `:root`.
+1. Vul `.env.local` volgens `.env.example`.
+2. Waitlist: `POST /api/newsletter` → Admin API (tag `BIONUTZ_PRELAUNCH`).
+3. Storefront (`src/lib/shopify.ts`) is voorbereid voor catalog/cart later.

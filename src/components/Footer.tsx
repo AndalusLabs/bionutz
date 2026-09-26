@@ -26,10 +26,10 @@ export default function Footer() {
           <div>
             <div className="footer__brand">
               <Image
-                src="/brand/logo_bionutz_new.png"
+                src="/images/bionutz-favicon-square.png"
                 alt="BIONUTZ"
-                width={160}
-                height={90}
+                width={56}
+                height={56}
                 className="footer__logo-img"
               />
             </div>
@@ -52,12 +52,12 @@ export default function Footer() {
             ))}
           </div>
 
-          <div>
-            <p className="footer__label">NIEUWSBRIEF</p>
+          <div className="footer__col">
+            <p className="footer__label">WAITLIST</p>
             <p style={{ marginBottom: 14 }}>
-              Nieuwe pinda&rsquo;s, nieuwe producten. E&eacute;n mail per maand.
+              Vanaf 1 december. Schrijf je in en ontvang 10% korting.
             </p>
-            <NewsletterForm />
+            <NewsletterForm variant="footer" />
             <div className="footer__social">
               {SOCIAL.map((item) => (
                 <Link key={item} href="#contact">{item}</Link>

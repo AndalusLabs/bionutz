@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import CartDrawer from '@/components/CartDrawer';
 
 export const metadata = {
-  title: 'Ons verhaal — BIONUTZ',
+  title: 'Ons verhaal',
   description: 'Van Bakau naar Nederland. Het familieambacht achter BIONUTZ.',
 };
 
@@ -87,16 +87,21 @@ export default function OnsVerhaalPage() {
                 </h2>
                 <div className="story-page__prose">
                   <p>
-                    Voor mij draait Bionutz om meer dan alleen goede pindakaas. Achter iedere pinda
-                    staan boeren en families die al generaties lang leven van de pindateelt.
+                    Onze pinda&rsquo;s komen 100% rechtstreeks uit Gambia, waar pindateelt voor veel
+                    families al generaties lang een belangrijke bron van inkomen is. Door zo direct
+                    samen te werken met lokale boeren en producenten, houden we de keten kort en
+                    blijft er meer waarde achter bij de mensen die aan het begin van het product
+                    staan.
                   </p>
                   <p>
-                    Onze pinda&rsquo;s komen zo direct mogelijk uit Gambia. Zo blijft de lijn tussen
-                    boer en consument kort, en komt er meer waarde terecht bij de mensen aan de bron.
+                    Zo helpt iedere pot Bionutz niet alleen om een eerlijk en puur product naar
+                    Nederland te brengen, maar draag je ook bij aan lokale handel, werk en inkomen in
+                    Gambia.
                   </p>
                   <p>
-                    Met iedere pot Bionutz proef je daarom niet alleen pindakaas, maar ook een stukje
-                    Gambia, familie en traditie.
+                    Voor ons is Bionutz daarom meer dan pindakaas. Het is een product met een
+                    duidelijke herkomst: van Gambiaanse bodem, via lokale handen, rechtstreeks naar
+                    jouw tafel.
                   </p>
                 </div>
               </article>

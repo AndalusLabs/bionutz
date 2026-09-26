@@ -16,7 +16,8 @@ export default function Hero() {
               Premium pinda&rsquo;s uit Gambia. Puur van oorsprong, eindeloos in mogelijkheden.
             </p>
             <div className="hero__actions">
-              <Link href="/#shop" className="btn btn--tan">SHOP BIONUTZ</Link>
+              <Link href="/#inschrijven" className="btn btn--tan">SCHRIJF JE IN</Link>
+              <Link href="/#shop" className="btn btn--sand">SHOP BIONUTZ</Link>
               <Link href="/ons-verhaal" className="btn btn--outline-light">ONS VERHAAL</Link>
             </div>
             <div className="hero__meta">

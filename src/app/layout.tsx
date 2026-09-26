@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Bricolage_Grotesque, Hanken_Grotesk, Instrument_Serif } from 'next/font/google';
 import { CartProvider } from '@/lib/cart';
+import { getSiteUrl, SITE_DESCRIPTION, SITE_NAME } from '@/lib/site';
 import './globals.css';
 
 const bricolage = Bricolage_Grotesque({
@@ -25,12 +26,50 @@ const instrument = Instrument_Serif({
   display: 'swap',
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  title: "BIONUTZ — Pure pinda. Pure smaak.",
-  description: "Premium pinda's uit Gambia. Puur van oorsprong, eindeloos in mogelijkheden.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${SITE_NAME} — Pure pinda. Pure smaak.`,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'nl_NL',
+    url: siteUrl,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — Pure pinda. Pure smaak.`,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: '/images/bionutz_logo_original-removebg-hq.png',
+        width: 1408,
+        height: 768,
+        alt: 'BIONUTZ',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_NAME} — Pure pinda. Pure smaak.`,
+    description: SITE_DESCRIPTION,
+    images: ['/images/bionutz_logo_original-removebg-hq.png'],
+  },
   icons: {
-    icon: [{ url: '/brand/favicon.png', type: 'image/png' }],
-    apple: [{ url: '/brand/favicon.png', type: 'image/png' }],
+    icon: [
+      { url: '/images/bionutz-favicon-square.png', type: 'image/png', sizes: '32x32' },
+      { url: '/images/bionutz-favicon-square.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: [{ url: '/images/bionutz-favicon-square.png', type: 'image/png', sizes: '180x180' }],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

@@ -32,7 +32,7 @@ export default function ProductGrid() {
               Het BIONUTZ-assortiment vertrekt altijd vanaf dezelfde pinda. In de schil, gepeld,
               geroosterd, gemalen of gebundeld in een bar. Nieuwe producten zijn onderweg.
             </p>
-            <Link href="/#contact" className="btn btn--tan btn--sm">
+            <Link href="/#inschrijven" className="btn btn--tan btn--sm">
               BLIJF OP DE HOOGTE
             </Link>
             <span className="shop__promo-mark" aria-hidden="true">

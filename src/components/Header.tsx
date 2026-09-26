@@ -24,10 +24,10 @@ export default function Header() {
       <div className="header__bar">
         <Link href="/" className="header__logo" aria-label="BIONUTZ Home" onClick={close}>
           <Image
-            src="/brand/logo_bionutz_new.png"
+            src="/images/bionutz_logo_original-removebg-hq.png"
             alt="BIONUTZ"
-            width={200}
-            height={112}
+            width={360}
+            height={196}
             className="header__logo-img"
             priority
           />

@@ -45,6 +45,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
+      // Hydrate after mount to avoid SSR/client mismatch
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional localStorage hydrate
       if (raw) setLines(JSON.parse(raw) as CartLine[]);
     } catch {
       /* ignore */
